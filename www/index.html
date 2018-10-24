@@ -34,12 +34,54 @@
   </head>
   <body ng-app="starter">
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
-      </ion-content>
-    </ion-pane>
+
+        <ion-side-menus enable-menu-with-back-views="false">
+            <ion-side-menu-content>
+                <ion-nav-bar class="bar-dark">
+                    <ion-nav-back-button></ion-nav-back-button>
+                    <ion-nav-buttons side="left">
+                        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+                        <ion-title>GlicON</ion-title>
+                    </ion-nav-buttons>
+                </ion-nav-bar>
+
+                <ion-nav-view name="appView" class="has-header">
+
+
+
+
+                    <div style="margin-top: 2em; text-align: center;">
+                        <span style="font-size: 1rem; color:darkgrey">última medição</span>
+                        <h1 style="font-size: 9rem">126</h1>
+                    </div>
+                    <div style="text-align: center; margin-top: 3rem">
+                        <button class="button button-balanced" style="font-size: 2rem; padding: 1.5rem">
+                            Nova Medição
+                        </button>
+                    </div>
+
+
+
+                </ion-nav-view>
+
+            </ion-side-menu-content>
+
+            <ion-side-menu side="left">
+                <ion-content>
+                    <ion-list>
+                        <ion-item menu-close ui-sref="page2">
+                            Dashboard
+                        </ion-item>
+                        <ion-item menu-close ui-sref="page2">
+                            Medições
+                        </ion-item>
+                    </ion-list>
+                </ion-content>
+            </ion-side-menu>
+        </ion-side-menus>
+
+
+
+
   </body>
 </html>
